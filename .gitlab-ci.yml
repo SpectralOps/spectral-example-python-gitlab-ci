@@ -1,0 +1,8 @@
+run-test:
+    script:
+      - curl -L spectralops.io/get | sh
+      - spectral --version
+      - spectral run
+    artifacts:
+        reports:
+            junit: junit-out/default.xml
